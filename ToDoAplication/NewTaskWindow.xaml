@@ -1,0 +1,27 @@
+﻿<Window x:Class="ToDoAplication.NewTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoAplication"
+        mc:Ignorable="d"
+        Title="Нова задача" Height="350" Width="300" Icon="/579703.png" FontFamily="Tempus Sans ITC">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="12,0,12,12">
+            <Button x:Name="SaveButton" Content="Зберегти" Click="SaveButton_Click" Margin="0,0,0,8" FontFamily="Tempus Sans ITC"/>
+            <Button x:Name="CancelButton" Content="Відмінити" Click="CancelButton_Click" FontFamily="Tempus Sans ITC"/>
+        </StackPanel>
+        <StackPanel Margin="12,12,12,12">
+            <TextBlock TextWrapping="Wrap" Text="Назва задачі" Margin="0,0,0,4" FontFamily="Tempus Sans ITC"/>
+            <TextBox x:Name="NameTextBox" TextWrapping="Wrap" Width="250" HorizontalAlignment="Left" Margin="0,0,0,8" TextChanged="NameTextBox_TextChanged" FontFamily="Tempus Sans ITC"/>
+            <CheckBox x:Name="IsCompletedCheckBox" Content="Задача виконана" Margin="0,0,0,12" FontFamily="Tempus Sans ITC"/>
+            <TextBlock TextWrapping="Wrap" Text="Подробиці задачі" Margin="0,0,0,8" FontFamily="Tempus Sans ITC"/>
+            <TextBox x:Name="DescriptionTextBox" TextWrapping="Wrap" Width="250" HorizontalAlignment="Left" Height="120" AcceptsReturn="True" FontFamily="Tempus Sans ITC"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
